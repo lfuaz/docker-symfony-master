@@ -26,7 +26,7 @@ services:
             - dev
 
     www:
-        build: ./php
+        build: php
         container_name: www
         ports:
             - "8741:80"

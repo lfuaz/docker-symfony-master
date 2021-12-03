@@ -18,5 +18,7 @@ RUN docker-php-ext-configure intl && \
 
 WORKDIR /var/www/
 
-COPY vhosts ./vhosts
-COPY project ./project
+COPY /project ./project
+RUN chown -R www-data: project
+
+USER www-data
