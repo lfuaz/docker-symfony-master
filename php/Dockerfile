@@ -16,6 +16,7 @@ RUN docker-php-ext-configure intl && \
     docker-php-ext-install pdo pdo_mysql gd opcache intl zip calendar dom mbstring zip gd xsl && \
     pecl install apcu && docker-php-ext-enable apcu
 
-
-
 WORKDIR /var/www/
+
+COPY vhosts ./vhosts
+COPY project ./project

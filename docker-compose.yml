@@ -26,13 +26,12 @@ services:
             - dev
 
     www:
-        build: php
+        build: ./php
         container_name: www
         ports:
             - "8741:80"
         volumes:
             - ./php/vhosts:/etc/apache2/sites-enabled
-            - ./:/var/www:cached
         restart: always
         networks:
             - dev
